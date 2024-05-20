@@ -1,4 +1,4 @@
-#include "timechangedetector_plugin.h"
+#include "system_time_change_detector_plugin.h"
 
 // This must be included before many other Windows headers.
 #include <windows.h>
@@ -27,7 +27,7 @@ namespace system_time_change_detector {
         if ((g_registrar != nullptr)) {
             OutputDebugString(L"EMITTING DATA CHANNEL CREATING\n"); // Print debug message
             auto channel = std::make_unique < flutter::MethodChannel < flutter::EncodableValue >> (
-                    g_registrar->messenger(), "timechangedetector",
+                    g_registrar->messenger(), "systemtimechangedetector",
                             &flutter::StandardMethodCodec::GetInstance());
 
             OutputDebugString(L"EMITTED DATA\n"); // Print debug message
@@ -98,13 +98,13 @@ void setupTimeChangeListener(flutter::PluginRegistrarWindows *registrar) {
 }
 
 // static
-void TimechangedetectorPlugin::RegisterWithRegistrar(
+void SystemTimeChangeDetectorPlugin::RegisterWithRegistrar(
         flutter::PluginRegistrarWindows *registrar) {
     auto channel = std::make_unique < flutter::MethodChannel < flutter::EncodableValue >> (
-            registrar->messenger(), "timechangedetector",
+            registrar->messenger(), "systemtimechangedetector",
                     &flutter::StandardMethodCodec::GetInstance());
 
-    auto plugin = std::make_unique<TimechangedetectorPlugin>();
+    auto plugin = std::make_unique<SystemTimeChangeDetectorPlugin>();
 
     channel->SetMethodCallHandler(
             [plugin_pointer = plugin.get(), registrar](const auto &call, auto result) {
@@ -115,11 +115,11 @@ void TimechangedetectorPlugin::RegisterWithRegistrar(
 
 }
 
-TimechangedetectorPlugin::TimechangedetectorPlugin() {}
+SystemTimeChangeDetectorPlugin::SystemTimeChangeDetectorPlugin() {}
 
-TimechangedetectorPlugin::~TimechangedetectorPlugin() {}
+SystemTimeChangeDetectorPlugin::~SystemTimeChangeDetectorPlugin() {}
 
-void TimechangedetectorPlugin::HandleMethodCall(
+void SystemTimeChangeDetectorPlugin::HandleMethodCall(
         const flutter::MethodCall <flutter::EncodableValue> &method_call,
         std::unique_ptr <flutter::MethodResult<flutter::EncodableValue>> result,
         flutter::PluginRegistrarWindows *registrar) {
@@ -146,4 +146,4 @@ void TimechangedetectorPlugin::HandleMethodCall(
     }
 }
 
-}  // namespace timechangedetector
+}  // namespace systemtimechangedetector

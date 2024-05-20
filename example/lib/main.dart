@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:system_time_change_detector/timechangedetector.dart';
+import 'package:system_time_change_detector/systemtimechangedetector.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String _platformVersion = '...';
   String _timeChange = '';
-  final _timechangedetectorPlugin = Timechangedetector();
+  final _timechangedetectorPlugin = SystemTimeChangeDetector();
 
   @override
   void initState() {
@@ -34,9 +34,8 @@ class _MyAppState extends State<MyApp> {
     try {
       platformVersion =
           await _timechangedetectorPlugin.getPlatformVersion() ?? 'Unknown platform version';
-      _timechangedetectorPlugin.getMethod().setMethodCallHandler((call) async => print("METHOD_HANDLER ${call.toString()}"));
       await _timechangedetectorPlugin.getSystemTimeChange(() {
-        print("TIME CHANGING");
+        debugPrint("TIME CHANGING");
         _timeChange = DateTime.now().toIso8601String();
         setState(() {
 
@@ -46,7 +45,7 @@ class _MyAppState extends State<MyApp> {
       platformVersion = 'Failed to get platform version.';
     } catch (e) {
       platformVersion = '$e';
-      print("Error $e");
+      debugPrint("Error $e");
     }
 
     // If the widget was removed from the tree while the asynchronous platform

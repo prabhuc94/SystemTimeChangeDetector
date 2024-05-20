@@ -5,8 +5,8 @@
 import FlutterMacOS
 import Foundation
 
-import timechangedetector
+import system_time_change_detector
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
-  TimechangedetectorPlugin.register(with: registry.registrar(forPlugin: "TimechangedetectorPlugin"))
+  SystemTimeChangeDetectorPlugin.register(with: registry.registrar(forPlugin: "SystemTimeChangeDetectorPlugin"))
 }

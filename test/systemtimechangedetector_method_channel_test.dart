@@ -1,12 +1,12 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:system_time_change_detector/timechangedetector_method_channel.dart';
+import 'package:system_time_change_detector/systemtimechangedetector_method_channel.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  MethodChannelTimechangedetector platform = MethodChannelTimechangedetector();
-  const MethodChannel channel = MethodChannel('timechangedetector');
+  MethodChannelTimeChangeDetector platform = MethodChannelTimeChangeDetector();
+  const MethodChannel channel = MethodChannel('systemtimechangedetector');
 
   setUp(() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(

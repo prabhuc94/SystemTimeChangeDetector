@@ -7,19 +7,19 @@
 #include <sstream>
 #include <memory>
 
-namespace timechangedetector {
+namespace system_time_change_detector {
 
-class TimechangedetectorPlugin : public flutter::Plugin {
+class SystemTimeChangeDetectorPlugin : public flutter::Plugin {
  public:
   static void RegisterWithRegistrar(flutter::PluginRegistrarWindows *registrar);
 
-  TimechangedetectorPlugin();
+  SystemTimeChangeDetectorPlugin();
 
-  virtual ~TimechangedetectorPlugin();
+  virtual ~SystemTimeChangeDetectorPlugin();
 
   // Disallow copy and assign.
-  TimechangedetectorPlugin(const TimechangedetectorPlugin&) = delete;
-  TimechangedetectorPlugin& operator=(const TimechangedetectorPlugin&) = delete;
+  SystemTimeChangeDetectorPlugin(const SystemTimeChangeDetectorPlugin&) = delete;
+  SystemTimeChangeDetectorPlugin& operator=(const SystemTimeChangeDetectorPlugin&) = delete;
 
     // Called when a method is called on this plugin's channel from Dart.
    void HandleMethodCall(
@@ -28,6 +28,6 @@ class TimechangedetectorPlugin : public flutter::Plugin {
             flutter::PluginRegistrarWindows* registrar);
 };
 
-}  // namespace timechangedetector
+}  // namespace systemtimechangedetector
 
 #endif  // FLUTTER_PLUGIN_TIMECHANGEDETECTOR_PLUGIN_H_

@@ -1,20 +1,19 @@
 
-import 'dart:ui';
 
 import 'package:flutter/services.dart';
 
-import 'timechangedetector_platform_interface.dart';
+import 'systemtimechangedetector_platform_interface.dart';
 
-class Timechangedetector {
+class SystemTimeChangeDetector {
   Future<String?> getPlatformVersion() {
-    return TimechangedetectorPlatform.instance.getPlatformVersion();
+    return SystemTimeChangeDetectorPlatform.instance.getPlatformVersion();
   }
 
   Future<dynamic> getSystemTimeChange(VoidCallback? callback) {
-    return TimechangedetectorPlatform.instance.detectTimeChange(callback);
+    return SystemTimeChangeDetectorPlatform.instance.detectTimeChange(callback);
   }
 
   MethodChannel getMethod() {
-    return TimechangedetectorPlatform.instance.mChannel;
+    return SystemTimeChangeDetectorPlatform.instance.mChannel;
   }
 }

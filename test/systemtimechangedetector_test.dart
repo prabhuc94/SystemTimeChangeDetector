@@ -1,13 +1,13 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:system_time_change_detector/timechangedetector.dart';
-import 'package:system_time_change_detector/timechangedetector_platform_interface.dart';
-import 'package:system_time_change_detector/timechangedetector_method_channel.dart';
+import 'package:system_time_change_detector/systemtimechangedetector.dart';
+import 'package:system_time_change_detector/systemtimechangedetector_platform_interface.dart';
+import 'package:system_time_change_detector/systemtimechangedetector_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockTimechangedetectorPlatform
     with MockPlatformInterfaceMixin
-    implements TimechangedetectorPlatform {
+    implements SystemTimeChangeDetectorPlatform {
 
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
@@ -20,16 +20,16 @@ class MockTimechangedetectorPlatform
 }
 
 void main() {
-  final TimechangedetectorPlatform initialPlatform = TimechangedetectorPlatform.instance;
+  final SystemTimeChangeDetectorPlatform initialPlatform = SystemTimeChangeDetectorPlatform.instance;
 
-  test('$MethodChannelTimechangedetector is the default instance', () {
-    expect(initialPlatform, isInstanceOf<MethodChannelTimechangedetector>());
+  test('$MethodChannelTimeChangeDetector is the default instance', () {
+    expect(initialPlatform, isInstanceOf<MethodChannelTimeChangeDetector>());
   });
 
   test('getPlatformVersion', () async {
-    Timechangedetector timechangedetectorPlugin = Timechangedetector();
+    SystemTimeChangeDetector timechangedetectorPlugin = SystemTimeChangeDetector();
     MockTimechangedetectorPlatform fakePlatform = MockTimechangedetectorPlatform();
-    TimechangedetectorPlatform.instance = fakePlatform;
+    SystemTimeChangeDetectorPlatform.instance = fakePlatform;
 
     expect(await timechangedetectorPlugin.getPlatformVersion(), '42');
   });

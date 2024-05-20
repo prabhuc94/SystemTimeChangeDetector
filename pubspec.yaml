@@ -1,6 +1,6 @@
 name: system_time_change_detector
 description: "Detect system time / timezone changes"
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/prabhuc94/SystemTimeChangeDetector
 
 environment:
@@ -22,8 +22,8 @@ flutter:
   plugin:
     platforms:
       linux:
-        pluginClass: TimechangedetectorPlugin
+        pluginClass: SystemTimeChangeDetectorPlugin
       macos:
-        pluginClass: TimechangedetectorPlugin
+        pluginClass: SystemTimeChangeDetectorPlugin
       windows:
-        pluginClass: TimechangedetectorPluginCApi
+        pluginClass: SystemTimeChangeDetectorPluginCApi

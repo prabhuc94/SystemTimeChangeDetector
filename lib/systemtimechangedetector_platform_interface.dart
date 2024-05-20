@@ -1,29 +1,28 @@
 import 'dart:ui';
-
 import 'package:flutter/src/services/platform_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'timechangedetector_method_channel.dart';
+import 'systemtimechangedetector_method_channel.dart';
 
-abstract class TimechangedetectorPlatform extends PlatformInterface {
+abstract class SystemTimeChangeDetectorPlatform extends PlatformInterface {
   /// Constructs a TimechangedetectorPlatform.
-  TimechangedetectorPlatform() : super(token: _token);
+  SystemTimeChangeDetectorPlatform() : super(token: _token);
 
   static final Object _token = Object();
 
-  static TimechangedetectorPlatform _instance = MethodChannelTimechangedetector();
+  static SystemTimeChangeDetectorPlatform _instance = MethodChannelTimeChangeDetector();
 
-  /// The default instance of [TimechangedetectorPlatform] to use.
+  /// The default instance of [SystemTimeChangeDetectorPlatform] to use.
   ///
-  /// Defaults to [MethodChannelTimechangedetector].
-  static TimechangedetectorPlatform get instance => _instance;
+  /// Defaults to [MethodChannelTimeChangeDetector].
+  static SystemTimeChangeDetectorPlatform get instance => _instance;
 
   MethodChannel get mChannel => throw UnimplementedError('methodChannel has not been found.');
 
   /// Platform-specific implementations should set this with their own
-  /// platform-specific class that extends [TimechangedetectorPlatform] when
+  /// platform-specific class that extends [SystemTimeChangeDetectorPlatform] when
   /// they register themselves.
-  static set instance(TimechangedetectorPlatform instance) {
+  static set instance(SystemTimeChangeDetectorPlatform instance) {
     PlatformInterface.verifyToken(instance, _token);
     _instance = instance;
   }

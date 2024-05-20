@@ -8,9 +8,9 @@
 #include <string>
 #include <variant>
 
-#include "timechangedetector_plugin.h"
+#include "system_time_change_detector_plugin.h"
 
-namespace timechangedetector {
+namespace systemtimechangedetector {
 namespace test {
 
 namespace {
@@ -22,17 +22,17 @@ using flutter::MethodResultFunctions;
 
 }  // namespace
 
-TEST(TimechangedetectorPlugin, GetPlatformVersion) {
-  TimechangedetectorPlugin plugin;
+TEST(SystemTimeChangeDetectorPlugin, GetPlatformVersion) {
+  SystemTimeChangeDetectorPlugin plugin;
   // Save the reply value from the success callback.
   std::string result_string;
-//  plugin.HandleMethodCall(
-//      MethodCall("getPlatformVersion", std::make_unique<EncodableValue>()),
-//      std::make_unique<MethodResultFunctions<>>(
-//          [&result_string](const EncodableValue* result) {
-//            result_string = std::get<std::string>(*result);
-//          },
-//          nullptr, nullptr));
+  plugin.HandleMethodCall(
+      MethodCall("getPlatformVersion", std::make_unique<EncodableValue>()),
+      std::make_unique<MethodResultFunctions<>>(
+          [&result_string](const EncodableValue* result) {
+            result_string = std::get<std::string>(*result);
+          },
+          nullptr, nullptr));
 
   // Since the exact string varies by host, just ensure that it's a string
   // with the expected format.

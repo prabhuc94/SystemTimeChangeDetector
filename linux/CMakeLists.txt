@@ -4,16 +4,16 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Project-level configuration.
-set(PROJECT_NAME "timechangedetector")
+set(PROJECT_NAME "system_time_change_detector")
 project(${PROJECT_NAME} LANGUAGES CXX)
 
 # This value is used when generating builds using this plugin, so it must
 # not be changed.
-set(PLUGIN_NAME "timechangedetector_plugin")
+set(PLUGIN_NAME "system_time_change_detector_plugin")
 
 # Any new source files that you add to the plugin should be added here.
 list(APPEND PLUGIN_SOURCES
-  "timechangedetector_plugin.cc"
+  "system_time_change_detector_plugin.cc"
 )
 
 # Define the plugin library target. Its name must not be changed (see comment
@@ -77,7 +77,7 @@ FetchContent_MakeAvailable(googletest)
 # The plugin's exported API is not very useful for unit testing, so build the
 # sources directly into the test binary rather than using the shared library.
 add_executable(${TEST_RUNNER}
-  test/timechangedetector_plugin_test.cc
+        test/system_time_change_detector_plugin_test.cc
   ${PLUGIN_SOURCES}
 )
 apply_standard_settings(${TEST_RUNNER})

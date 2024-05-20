@@ -5,7 +5,7 @@
 cmake_minimum_required(VERSION 3.14)
 
 # Project-level configuration.
-set(PROJECT_NAME "timechangedetector")
+set(PROJECT_NAME "system_time_change_detector")
 project(${PROJECT_NAME} LANGUAGES CXX)
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
@@ -14,20 +14,19 @@ cmake_policy(VERSION 3.14...3.25)
 
 # This value is used when generating builds using this plugin, so it must
 # not be changed
-set(PLUGIN_NAME "timechangedetector_plugin")
+set(PLUGIN_NAME "system_time_change_detector_plugin")
 
 # Any new source files that you add to the plugin should be added here.
 list(APPEND PLUGIN_SOURCES
-  "timechangedetector_plugin.cpp"
-  "timechangedetector_plugin.h"
+  "system_time_change_detector_plugin.cpp"
+  "system_time_change_detector_plugin.h"
 )
 
 # Define the plugin library target. Its name must not be changed (see comment
 # on PLUGIN_NAME above).
 add_library(${PLUGIN_NAME} SHARED
-  "include/timechangedetector/timechangedetector_plugin_c_api.h"
-  "timechangedetector_plugin_c_api.cpp"
-#  "core_detector.cpp"
+  "include/system_time_change_detector/system_time_change_detector_plugin_c_api.h"
+  "system_time_change_detector_plugin_c_api.cpp"
   ${PLUGIN_SOURCES}
 )
 
@@ -52,7 +51,7 @@ target_link_libraries(${PLUGIN_NAME} PRIVATE flutter flutter_wrapper_plugin)
 # List of absolute paths to libraries that should be bundled with the plugin.
 # This list could contain prebuilt libraries, or libraries created by an
 # external build triggered from this build file.
-set(timechangedetector_bundled_libraries
+set(system_time_change_detector_bundled_libraries
   ""
   PARENT_SCOPE
 )
@@ -82,7 +81,7 @@ FetchContent_MakeAvailable(googletest)
 # The plugin's C API is not very useful for unit testing, so build the sources
 # directly into the test binary rather than using the DLL.
 add_executable(${TEST_RUNNER}
-  test/timechangedetector_plugin_test.cpp
+  test/systemtimechangedetector_plugin_test.cpp
   ${PLUGIN_SOURCES}
 )
 apply_standard_settings(${TEST_RUNNER})

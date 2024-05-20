@@ -6,9 +6,9 @@
 
 #include "generated_plugin_registrant.h"
 
-#include <timechangedetector/timechangedetector_plugin_c_api.h>
+#include <system_time_change_detector/system_time_change_detector_plugin_c_api.h>
 
 void RegisterPlugins(flutter::PluginRegistry* registry) {
-  TimechangedetectorPluginCApiRegisterWithRegistrar(
-      registry->GetRegistrarForPlugin("TimechangedetectorPluginCApi"));
+  SystemTimeChangeDetectorPluginCApiRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("SystemTimeChangeDetectorPluginCApi"));
 }

@@ -10,7 +10,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 
-import 'package:timechangedetector/timechangedetector.dart';
+import 'package:system_time_change_detector/timechangedetector.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();

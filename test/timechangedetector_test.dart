@@ -1,10 +1,8 @@
-import 'dart:ui';
-
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:timechangedetector/timechangedetector.dart';
-import 'package:timechangedetector/timechangedetector_platform_interface.dart';
-import 'package:timechangedetector/timechangedetector_method_channel.dart';
+import 'package:system_time_change_detector/timechangedetector.dart';
+import 'package:system_time_change_detector/timechangedetector_platform_interface.dart';
+import 'package:system_time_change_detector/timechangedetector_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockTimechangedetectorPlatform

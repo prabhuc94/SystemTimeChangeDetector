@@ -1,7 +1,7 @@
-name: timechangedetector
+name: system_time_change_detector
 description: "Detect system time / timezone changes"
 version: 0.0.1
-homepage: https://github.com/prabhuc94/SystemTimeChangeDetector.git
+homepage: https://github.com/prabhuc94/SystemTimeChangeDetector
 
 environment:
   sdk: '>=3.2.5 <4.0.0'

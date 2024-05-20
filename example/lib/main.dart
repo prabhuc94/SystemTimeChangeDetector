@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:timechangedetector/timechangedetector.dart';
+import 'package:system_time_change_detector/timechangedetector.dart';
 
 void main() {
   runApp(const MyApp());

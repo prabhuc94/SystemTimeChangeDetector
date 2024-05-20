@@ -13,7 +13,7 @@
 extern "C" {
 #endif
 
-FLUTTER_PLUGIN_EXPORT void TimechangedetectorPluginCApiRegisterWithRegistrar(
+FLUTTER_PLUGIN_EXPORT void SystemTimeChangeDetectorPluginCApiRegisterWithRegistrar(
     FlutterDesktopPluginRegistrarRef registrar);
 
 #if defined(__cplusplus)

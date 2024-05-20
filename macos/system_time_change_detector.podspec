@@ -3,7 +3,7 @@
 # Run `pod lib lint timechangedetector.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'timechangedetector'
+  s.name             = 'system_time_change_detector'
   s.version          = '0.0.1'
   s.summary          = 'A new Flutter project.'
   s.description      = <<-DESC

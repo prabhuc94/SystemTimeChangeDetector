@@ -17,7 +17,7 @@
 #include <thread>
 #include <iostream>
 
-namespace timechangedetector {
+namespace system_time_change_detector {
 
     // Global pointer to store the registrar
     flutter::PluginRegistrarWindows *g_registrar = nullptr;

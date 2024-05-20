@@ -1,10 +1,10 @@
 import Cocoa
 import FlutterMacOS
 
-public class TimechangedetectorPlugin: NSObject, FlutterPlugin {
+public class SystemTimeChangeDetectorPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "timechangedetector", binaryMessenger: registrar.messenger)
-    let instance = TimechangedetectorPlugin()
+    let instance = SystemTimeChangeDetectorPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 

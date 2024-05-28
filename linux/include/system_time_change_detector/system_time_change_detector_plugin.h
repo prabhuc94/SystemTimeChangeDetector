@@ -11,14 +11,14 @@ G_BEGIN_DECLS
 #define FLUTTER_PLUGIN_EXPORT
 #endif
 
-typedef struct _TimechangedetectorPlugin TimechangedetectorPlugin;
+typedef struct _SystemTimeChangeDetectorPlugin SystemTimeChangeDetectorPlugin;
 typedef struct {
   GObjectClass parent_class;
-} TimechangedetectorPluginClass;
+} SystemTimeChangeDetectorPluginClass;
 
-FLUTTER_PLUGIN_EXPORT GType timechangedetector_plugin_get_type();
+FLUTTER_PLUGIN_EXPORT GType system_time_change_detector_plugin_get_type();
 
-FLUTTER_PLUGIN_EXPORT void timechangedetector_plugin_register_with_registrar(
+FLUTTER_PLUGIN_EXPORT void system_time_change_detector_plugin_register_with_registrar(
     FlPluginRegistrar* registrar);
 
 G_END_DECLS

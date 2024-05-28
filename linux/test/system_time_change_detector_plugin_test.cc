@@ -2,8 +2,8 @@
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
 
-#include "include/timechangedetector/timechangedetector_plugin.h"
-#include "timechangedetector_plugin_private.h"
+#include "include/systemtimechangedetector/system_time_change_detector_plugin.h"
+#include "system_time_change_detector_plugin_private.h"
 
 // This demonstrates a simple unit test of the C portion of this plugin's
 // implementation.
@@ -13,10 +13,10 @@
 // built for x64 debug, run:
 // $ build/linux/x64/debug/plugins/my_plugin/my_plugin_test
 
-namespace timechangedetector {
+namespace system_time_change_detector {
 namespace test {
 
-TEST(TimechangedetectorPlugin, GetPlatformVersion) {
+TEST(SystemTimeChangeDetectorPlugin, GetPlatformVersion) {
   g_autoptr(FlMethodResponse) response = get_platform_version();
   ASSERT_NE(response, nullptr);
   ASSERT_TRUE(FL_IS_METHOD_SUCCESS_RESPONSE(response));
@@ -28,4 +28,4 @@ TEST(TimechangedetectorPlugin, GetPlatformVersion) {
 }
 
 }  // namespace test
-}  // namespace timechangedetector
+}  // namespace system_time_change_detector

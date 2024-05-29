@@ -8,5 +8,10 @@
 	<true/>
 	<key>com.apple.security.network.server</key>
 	<true/>
+	<key>com.apple.security.temporary-exception.files.home-relative-path.read-only</key>
+        <array>
+            <string>/etc/localtime</string>
+            <string>/etc/timezone</string>
+        </array>
 </dict>
 </plist>

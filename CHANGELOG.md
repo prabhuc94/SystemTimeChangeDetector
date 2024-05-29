@@ -8,3 +8,7 @@
 
 ## 0.0.3
 * Linux compatibility issues fixed
+
+## 0.0.4
+- BreakChanges
+* Description and file name changed

@@ -1,6 +1,6 @@
 name: system_time_change_detector
-description: "Detect system time / timezone changes"
-version: 0.0.3
+description: "This plugin allows to detect timezone / time changes via Flutter desktop apps."
+version: 0.0.4
 homepage: https://github.com/prabhuc94/SystemTimeChangeDetector
 
 environment:

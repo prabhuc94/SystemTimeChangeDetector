@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import 'systemtimechangedetector_platform_interface.dart';
+import 'system_time_change_detector_platform_interface.dart';
 
 /// An implementation of [SystemTimeChangeDetectorPlatform] that uses method channels.
 class MethodChannelTimeChangeDetector extends SystemTimeChangeDetectorPlatform {

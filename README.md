@@ -38,10 +38,10 @@ await _timechangedetectorPlugin.getSystemTimeChange(() {
 
 ## Platform Differences
 
-| Name     | Description                                                                        | Linux | macOS | Windows |
-| -------- | ---------------------------------------------------------------------------------- | ----- | ----- | ------- |
-| `timezone` | Drag the cursor around an object to form a rectangle.                          | ✔️    | ➖  | ✔️ |
-| `time` | Capture the entire screen.                                                         | ➖    | ➖  | ✔️ |
+| Name     | Description                       | Linux | macOS | Windows |
+| -------- |-----------------------------------| ----- | ----- | ------- |
+| `timezone` | Detect system timezone changes    | ✔️    | ➖  | ✔️ |
+| `time` | Detect system time / date changes | ➖    | ➖  | ✔️ |
 
 
 ## License

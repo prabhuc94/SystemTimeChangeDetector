@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:system_time_change_detector/systemtimechangedetector_method_channel.dart';
+import 'package:system_time_change_detector/system_time_change_detector_method_channel.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

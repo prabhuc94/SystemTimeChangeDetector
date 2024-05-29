@@ -2,7 +2,7 @@
 
 import 'package:flutter/services.dart';
 
-import 'systemtimechangedetector_platform_interface.dart';
+import 'system_time_change_detector_platform_interface.dart';
 
 class SystemTimeChangeDetector {
   Future<String?> getPlatformVersion() {

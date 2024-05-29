@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/src/services/platform_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'systemtimechangedetector_method_channel.dart';
+import 'system_time_change_detector_method_channel.dart';
 
 abstract class SystemTimeChangeDetectorPlatform extends PlatformInterface {
   /// Constructs a TimechangedetectorPlatform.

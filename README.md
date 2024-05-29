@@ -1,15 +1,49 @@
-# timechangedetector
+# system_time_change_detector
 
-A new Flutter project.
 
-## Getting Started
+This plugin allows to detect timezone / time changes via Flutter desktop apps.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Platform Support
 
+| Linux | macOS | Windows |
+| :---: | :---: | :-----: |
+|  ✔️   |  ➖   |   ✔️    |
+
+## Quick Start
+
+### Installation
+
+Add this to your package's pubspec.yaml file:
+
+```yaml
+dependencies:
+  system_time_change_detector: ^0.0.3
+```
+
+### Example
+``` dart
+// Import package
+import 'package:system_time_change_detector/systemtimechangedetector.dart';
+
+// Initialize variable
+final _timechangedetectorPlugin = SystemTimeChangeDetector();
+await _timechangedetectorPlugin.getSystemTimeChange(() {
+        debugPrint("TIME / ZONE CHANGED"); // Handle the changes
+      });
+```
+
+
+> Please see the example app of this plugin for a full example.
+
+## Platform Differences
+
+| Name     | Description                                                                        | Linux | macOS | Windows |
+| -------- | ---------------------------------------------------------------------------------- | ----- | ----- | ------- |
+| `timezone` | Drag the cursor around an object to form a rectangle.                          | ✔️    | ➖  | ✔️ |
+| `time` | Capture the entire screen.                                                         | ➖    | ➖  | ✔️ |
+
+
+## License
+
+[MIT](./LICENSE)

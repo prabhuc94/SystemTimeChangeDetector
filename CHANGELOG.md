@@ -5,3 +5,6 @@
 ## 0.0.2
 
 * Changed Library name and all package name changed to SystemTimeChangeDetector
+
+## 0.0.3
+* Linux compatibility issues fixed
